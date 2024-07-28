@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>TheEvent - Bootstrap Event Template</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+  <link href="img/favicon.png" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/venobox/venobox.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+    Theme Name: TheEvent
+    Theme URL: https://bootstrapmade.com/theevent-conference-event-bootstrap-template/
+    Author: BootstrapMade.com
+    License: https://bootstrapmade.com/license/
+  ======================================================= -->
+</head>
+
+<body>
+
+  <!--==========================
+    Header
+  ============================-->
+  <header id="header">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+        <!-- Uncomment below if you prefer to use a text logo -->
+        <!-- <h1><a href="#main">C<span>o</span>nf</a></h1>-->
+        <a href="#intro" class="scrollto"><h1 style="color:white;">Adida <span>Events</span> </h1>
+      </div>
+
+      <nav id="nav-menu-container">
+       
+        <ul class="nav-menu">
+          <li class="menu-active"><a href="#intro">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#contact">Contact us</a></li>
+
+        </ul>
+     
+        <button class="open-modal-btn" id="openModalBtn">Book an Event</button>
+
+          <div id="bookingModal" class="modal">
+    
+       <div class="modal-content">
+        <span class="close" id="closeModalBtn">&times;</span>
+        <form action="/submit-booking" method="POST">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="event-type">Event Type</label>
+            <select id="event-type" name="event-type" required>
+                <option value="conference">Conference</option>
+                <option value="workshop">Workshop</option>
+                <option value="seminar">Seminar</option>
+                <option value="webinar">Webinar</option>
+                <option value="celebration">Celebration</option>
+                <option value="other-events">Other Events</option>
+            </select>
+
+            <label for="event-date">Event Date</label>
+            <input type="date" id="event-date" name="event-date" required>
+
+            <label for="comments">Additional Comments</label>
+            <textarea id="comments" name="comments" rows="4"></textarea>
+
+            <button type="submit">Book Event</button>
+        </form>
+        </div>
+</div>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header>
+  
+  
+  <!-- #header -->
+
+  <!--==========================
+    Intro Section
+  ============================-->
+  <img src="about side.jpg" alt="">
+  <section id="intro">
+    <div class="intro-container wow fadeIn">
+      <h1 class="mb-4 pb-0" >ADIDA EVENTS<br><span>MAKING </span>YOUR DAY "Brighten Up"</h1>
+      
+      <a href="https://www.youtube.com/watch?v=d77TQupCENc" class="venobox play-btn mb-4" data-vbtype="video"
+        data-autoplay="true"></a>
+      <a href="#about" class="about-btn scrollto">About The Event</a>
+    </div>
+  </section>
+
+  <main id="main">
+
+    <!--==========================
+      About Section
+    ============================-->
+    <section id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <h2>About The Event</h2>
+            <p style="text-align: justify;">Welcome to our company, your go-to source for construction, contractual services, and event management. We specialize in top-notch construction and contracting services for interior design and exhibitions, with a commitment to craftsmanship and client satisfaction. We also excel in curating unforgettable experiences for weddings, birthdays, and special events, transforming ordinary occasions into extraordinary memories with creativity and attention to detail.
+
+              Our services include interior design, exhibition setup, event planning, decor arrangements, and gift decorations. Our dedicated team of professionals ensures excellence and customer satisfaction in every project.</p>
+          </div>
+          <div class="col-lg-3">
+            
+           
+            
+        </div>
+      </div>
+    </section>
+
+    <!--==========================
+      services Section
+    ============================-->
+    <section id="services">
+      <div class="section-header">
+        <h2>Our Services</h2></div>
+        <div class="service-container">
+            <div class="service">
+                <img src="img/gallery/corporate.jpeg" alt="Project Management">
+                <h3>Corporate events</h3>
+                <p>Adida Events delivers top-notch corporate events tailored to your needs, from impactful conferences to dynamic team-building activities. Let us handle the details, ensuring a seamless and memorable experience for your team..</p>
+                <button type="button"> book now</button>
+            </div>
+      
+            <div class="service">
+                <img src="img/gallery/wedding meals.jpeg" alt="Quality Control">
+                <h3>Wedding meal</h3>
+                <p>Indulge in a beautifully crafted wedding meal with Adida Events, where each dish is prepared to perfection. Our menu is designed to delight your guests and make your celebration truly special.</p>
+                <button type="button"> book now</button>
+            </div>
+
+            <div class="service">
+                <img src="img/gallery/birthday parties 2.jpg" alt="Skilled Labour">
+                <h3>Birthday parties</h3>
+                <p>Celebrate your special day with Adida Events, where we turn your birthday party into a memorable occasion. Our tailored events and vibrant setups ensure a fun and festive experience for all your guests..</p>
+                <button type="button"> book now</button>
+            </div>
+
+            <div class="service">
+              <img src="img/gallery/bar services.jpg" alt="Event Planning">
+              <h3>Bar service</h3>
+              <p>Elevate your event with Adida Events' professional bar services. Our skilled bartenders craft custom cocktails and serve a wide range of beverages, ensuring your guests enjoy a top-notch drinking experience..</p>
+              <button type="button"> book now</button>
+          </div>
+
+          <div class="service">
+            <img src="img/gallery/drop off catring (2).webp" alt="Decor Arrangements">
+            <h3>Drop off catering</h3>
+            <p>Enjoy delicious, expertly prepared meals with Adida Events' drop-off catering service. We provide high-quality food delivered right to your location, making your event effortless and enjoyable..</p>
+            <button type="button"> book now</button>
+        </div>
+
+        <div class="service">
+          <img src="img/gallery/staffing.jpg" alt="Gift Decorations">
+          <h3>Staff services</h3>
+          <p>Experience exceptional service with Adida Events' dedicated staff. Our trained professionals ensure your event runs smoothly, providing attentive and courteous support to meet all your needs.</p>
+          <button type="button"> book now</button>
+      </div>
+      </div>
+    </section>
+
+
+  
+
+    <!--==========================
+      Gallery Section
+    ============================-->
+    <section id="gallery" class="wow fadeInUp">
+
+      <div class="container">
+        <div class="section-header">
+          <h2>Gallery</h2>
+          <p>Check our gallery from the recent events</p>
+        </div>
+      </div>
+
+      <div class="owl-carousel gallery-carousel">
+       
+        <a href="2.jpeg" class="venobox" data-gall="gallery-carousel"><img src="2.jpeg" alt=""></a>
+        <a href="4.jpeg" class="venobox" data-gall="gallery-carousel"><img src="4.jpeg" alt=""></a>
+        <a href="5.jpeg" class="venobox" data-gall="gallery-carousel"><img src="5.jpeg" alt=""></a>
+        <a href="6.jpeg" class="venobox" data-gall="gallery-carousel"><img src="6.jpeg" alt=""></a>
+        
+        
+      </div>
+
+    </section>
+
+    <!--==========================
+      Testimonials Section
+    ============================-->
+    <section id="testimonials" class="section-with-bg wow fadeInUp">
+      <div class="section-header">
+      <h2>Testimonials</h2>
+    </div>
+    <div class="parentdiv">
+      <div class="testimonial">
+          <p>"Adida events thank you for making my event wonderful. Happy to connect !"</p>
+          <h4>– Rachna Maheshwari</h4>
+      </div>
+      <div class="testimonial">
+          <p>"Superb people, great service and huge satifaction."</p>
+          <h4>– Gagan Budhiraja</h4>
+      </div>
+      <div class="testimonial">
+          <p>"One stop solution for all events related needs."</p>
+          <h4>– Kanika Maheshwari</h4>
+      </div>
+    </div>
+                 
+          
+            
+
+    </section>
+
+    <!--==========================
+      Contact Section
+    ============================-->
+    <section id="contact" class="section-bg wow fadeInUp">
+
+      <div class="container">
+
+        <div class="section-header">
+          <h2>Contact Us</h2>
+          <p>Nihil officia ut sint molestiae tenetur.</p>
+        </div>
+
+        <div class="row contact-info">
+
+          <div class="col-md-4">
+            <div class="contact-address">
+              <i class="ion-ios-location-outline"></i>
+              <h3>Address</h3>
+              <address>1/6979 street no -2 Shivaji Park shahdara Delhi-110032</address>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="contact-phone">
+              <i class="ion-ios-telephone-outline"></i>
+              <h3>Phone Number</h3>
+              <p><a href="tel:8800123421">8800123421</a></p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="contact-email">
+              <i class="ion-ios-email-outline"></i>
+              <h3>Email</h3>
+              <p><a href=" adidaevents@gmail.com"> adidaevents@gmail.com</a></p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="form">
+          <div id="sendmessage">Your message has been sent. Thank you!</div>
+          <div id="errormessage"></div>
+          <form action="" method="post" role="form" class="contactForm">
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                <div class="validation"></div>
+              </div>
+              <div class="form-group col-md-6">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                <div class="validation"></div>
+              </div>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+              <div class="validation"></div>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+              <div class="validation"></div>
+            </div>
+            <div class="text-center"><button type="submit">Send Message</button></div>
+          </form>
+        </div>
+
+      </div>
+    </section><!-- #contact -->
+
+  </main>
+  <!--==========================
+    Footer
+  ============================-->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-info">
+            <h2 style="color: white;">Adida <span style="color: red;">Events</span></h2>
+            <p>Adida Events is a premier event management company dedicated to creating unforgettable experiences. Specializing in both corporate and personal events, we bring a unique blend of creativity, professionalism, and meticulous attention to detail to every project..</p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="fa fa-angle-right"></i> <a href="#">Home</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="#">About us</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="#">Services</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="fa fa-angle-right"></i> <a href="#">Home</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="#">About us</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="#">Services</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h4>Contact Us</h4>
+            <p>
+              1/6979 street no -2 Shivaji Park shahdara Delhi-110032 <br>
+              <strong>Phone:</strong> 8800123421<br>
+              <strong>Email:</strong> adidaevents@gmail.com<br>
+            </p>
+
+            <div class="social-links">
+              
+              <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+              <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+              
+              
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+          <!-- <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="fa fa-angle-right"></i> <a href="#">Home</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="#">About us</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="#">Services</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div> -->
+
+          
+
+    <div class="container">
+      <div class="copyright">
+        <strong>Adida Events</strong> Pvt. Ltd. @2024. All rights reserved.
+      </div>
+      <!-- <div class="credits">
+        
+          All the links in the footer should remain intact.
+          You can delete the links only if you purchased the pro version.
+          Licensing information: https://bootstrapmade.com/license/
+          Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=TheEvent
+        
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div> -->
+    </div>
+  </footer><!-- #footer -->
+
+  <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
+
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/superfish/hoverIntent.js"></script>
+  <script src="lib/superfish/superfish.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/venobox/venobox.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+  <!-- Contact Form JavaScript File -->
+  <script src="contactform/contactform.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>
