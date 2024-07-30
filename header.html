@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/venobox/venobox.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <!--==========================
+    Header
+  ============================-->
+  <div id="header">
+    <header id="header" class="header">
+        <div class="container">
+            <div id="logo" class="pull-left">
+                <a href="#intro" class="scrollto"><h1 style="color:white;">Adida <span>Events</span></h1></a>
+            </div>
+
+            <nav id="nav-menu-container" class="navbar navbar-expand-lg">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active"><a class="nav-link" href="#intro">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact us</a></li>
+                    </ul>
+                </div>
+                <button class="open-modal-btn btn btn-primary btn btn-success" id="openModalBtn">Book an Event</button>
+            </nav>
+        </div>
+    </header><!-- #header -->
+  </div>
+
+  <!-- Booking Modal -->
+  <div id="bookingModal" class="modal">
+      <div class="modal-content">
+          <span class="close" id="closeModalBtn">&times;</span>
+          <form action="/submit-booking" method="POST">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required>
+
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" required>
+
+              <label for="event-type">Event Type</label>
+              <select id="event-type" name="event-type" required>
+                  <option value="conference">Conference</option>
+                  <option value="workshop">Workshop</option>
+                  <option value="seminar">Seminar</option>
+                  <option value="webinar">Webinar</option>
+                  <option value="celebration">Celebration</option>
+                  <option value="other-events">Other Events</option>
+              </select>
+
+              <label for="event-date">Event Date</label>
+              <input type="date" id="event-date" name="event-date" required>
+
+              <label for="comments">Additional Comments</label>
+              <textarea id="comments" name="comments" rows="4"></textarea>
+
+              <button type="submit" class="btn btn-primary">Book Event</button>
+          </form>
+      </div>
+  </div>
+
+
+  
+
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script>
+      // Modal script
+      var modal = document.getElementById("bookingModal");
+      var btn = document.getElementById("openModalBtn");
+      var span = document.getElementById("closeModalBtn");
+
+      btn.onclick = function() {
+          modal.style.display = "block";
+      }
+
+      span.onclick = function() {
+          modal.style.display = "none";
+      }
+
+      window.onclick = function(event) {
+          if (event.target == modal) {
+              modal.style.display = "none";
+          }
+      }
+  </script>
+
+
+</body>
+</html>
