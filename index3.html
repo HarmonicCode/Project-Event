@@ -29,27 +29,208 @@
 
   <!-- =======================================================
     Theme Name: TheEvent
-    Theme URL: https://bootstrapmade.com/theevent-conference-event-bootstrap-template/
-    Author: BootstrapMade.com
-    License: https://bootstrapmade.com/license/
+   
   ======================================================= -->
 </head>
 
 <body>
-  <div id="header"></div>
+  <style>
+    @media (max-width: 768px) {
+    .footer-top .footer-info, 
+    .footer-top .footer-links,
+    .footer-top .footer-contact {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+}
+
+.footer-info h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.footer-links h4,
+.footer-contact h4 {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+.footer-contact p {
+    margin-bottom: 10px;
+}
+
+.footer-top {
+    padding: 60px 0;
+    background: #333;
+    color: #fff;
+}
+
+.footer-info,
+.footer-links,
+.footer-contact {
+    color: #fff;
+}
+
+.footer-info p,
+.footer-links ul,
+.footer-contact p {
+    font-size: 14px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    padding: 5px 0;
+}
+
+.footer-links ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-links ul li a:hover {
+    color: #ddd;
+}
+
+.social-links a {
+    font-size: 18px;
+    display: inline-block;
+    background: #333;
+    color: #fff;
+    line-height: 1;
+    padding: 8px 0;
+    margin-right: 4px;
+    border-radius: 50%;
+    transition: 0.3s;
+    border: 1px solid #333;
+}
+
+.social-links a:hover {
+    background: #fff;
+    color: #333;
+}
+
+.copyright {
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+}
+
+  </style>
+
 
 
   
   <!-- #header -->
+    <!--==========================
+    Header
+  ============================-->
+  <div id="header">
+    <header id="header" class="header"  style="background:black">
+        <div class="container">
+            <div id="logo" class="pull-left">
+                <a href="#intro" class="scrollto"><h1 style="color:white;">Adida <span>Events</span></h1></a>
+            </div>
+
+            <nav id="nav-menu-container" class="navbar navbar-expand-lg">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active"><a class="nav-link" href="#intro">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact us</a></li>
+                    </ul>
+                </div>
+         
+                <button class="open-modal-btn btn" id="openModalBtn" style="background-color: blue; border-color: blue;">Book an Event</button>
+
+            </nav>
+        </div>
+    </header><!-- #header -->
+  </div>
+
+  <!-- Booking Modal -->
+  <div id="bookingModal" class="modal">
+      <div class="modal-content">
+          <span class="close" id="closeModalBtn">&times;</span>
+          <form action="/submit-booking" method="POST">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required>
+
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" required>
+
+              <label for="event-type">Event Type</label>
+              <select id="event-type" name="event-type" required>
+                  <option value="conference">Conference</option>
+                  <option value="workshop">Workshop</option>
+                  <option value="seminar">Seminar</option>
+                  <option value="webinar">Webinar</option>
+                  <option value="celebration">Celebration</option>
+                  <option value="other-events">Other Events</option>
+              </select>
+
+              <label for="event-date">Event Date</label>
+              <input type="date" id="event-date" name="event-date" required>
+
+              <label for="comments">Additional Comments</label>
+              <textarea id="comments" name="comments" rows="4"></textarea>
+
+              <button type="submit" class="btn btn-primary">Book Event</button>
+          </form>
+      </div>
+  </div>
+
+
+  
+
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script>
+      // Modal script
+      var modal = document.getElementById("bookingModal");
+      var btn = document.getElementById("openModalBtn");
+      var span = document.getElementById("closeModalBtn");
+
+      btn.onclick = function() {
+          modal.style.display = "block";
+      }
+
+      span.onclick = function() {
+          modal.style.display = "none";
+      }
+
+      window.onclick = function(event) {
+          if (event.target == modal) {
+              modal.style.display = "none";
+          }
+      }
+  </script>
+
+
+
+  
+  <main id="main" class="main-page">
 
   <!--========================== 
     Intro Section
   ============================-->
   <img src="about side.jpg" alt="">
   <section id="intro">
+    
     <div class="intro-container wow fadeIn">
       <h1 class="mb-4 pb-0" >ADIDA EVENTS<br><span>MAKING </span>YOUR DAY "Brighten Up"</h1>
-      
       <a href="https://www.youtube.com/watch?v=d77TQupCENc" class="venobox play-btn mb-4" data-vbtype="video"
         data-autoplay="true"></a>
       <a href="#about" class="about-btn scrollto">About The Event</a>
@@ -65,6 +246,8 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-6">
+            <br>
+            <br>
             <h2>About The Event</h2>
             <p style="text-align: justify;">Welcome to our company, your go-to source for construction, contractual services, and event management. We specialize in top-notch construction and contracting services for interior design and exhibitions, with a commitment to craftsmanship and client satisfaction. We also excel in curating unforgettable experiences for weddings, birthdays, and special events, transforming ordinary occasions into extraordinary memories with creativity and attention to detail.
 
@@ -83,6 +266,9 @@
     ============================-->
     <section id="services">
       <div class="section-header">
+        <br>
+        <br>
+
         <h2>Our Services</h2></div>
         <div class="service-container">
             <div class="service">
@@ -90,7 +276,7 @@
                 <h3>Corporate events</h3>
                 <p>Adida Events delivers top-notch corporate events tailored to your needs, from impactful conferences to dynamic team-building activities. Let us handle the details, ensuring a seamless and memorable experience for your team..</p>
                 <div class="d-flex justify-content-center">
-                  <button type="button" class="btn btn-success">Book Now</button>
+                  <button type="button" class="btn btn-primary">Book Now</button>
                 </div>
               
             </div>
@@ -100,7 +286,7 @@
                 <h3>Wedding meal</h3>
                 <p>Indulge in a beautifully crafted wedding meal with Adida Events, where each dish is prepared to perfection. Our menu is designed to delight your guests and make your celebration truly special.</p>
                 <div class="d-flex justify-content-center">
-                  <button type="button" class="btn btn-success">Book Now</button>
+                  <button type="button" class="btn btn-primary">Book Now</button>
                 </div>
               
             </div>
@@ -110,7 +296,7 @@
                 <h3>Birthday parties</h3>
                 <p>Celebrate your special day with Adida Events, where we turn your birthday party into a memorable occasion. Our tailored events and vibrant setups ensure a fun and festive experience for all your guests..</p>
                 <div class="d-flex justify-content-center">
-                  <button type="button" class="btn btn-success">Book Now</button>
+                  <button type="button" class="btn btn-primary">Book Now</button>
                 </div>
               
             </div>
@@ -120,7 +306,7 @@
               <h3>Bar service</h3>
               <p>Elevate your event with Adida Events' professional bar services. Our skilled bartenders craft custom cocktails and serve a wide range of beverages, ensuring your guests enjoy a top-notch drinking experience..</p>
               <div class="d-flex justify-content-center">
-                <button type="button" class="btn btn-success">Book Now</button>
+                <button type="button" class="btn btn-primary">Book Now</button>
               </div>
             
           </div>
@@ -130,7 +316,7 @@
             <h3>Drop off catering</h3>
             <p>Enjoy delicious, expertly prepared meals with Adida Events' drop-off catering service. We provide high-quality food delivered right to your location, making your event effortless and enjoyable..</p>
             <div class="d-flex justify-content-center">
-              <button type="button" class="btn btn-success">Book Now</button>
+              <button type="button" class="btn btn-primary">Book Now</button>
             </div>
           
         </div>
@@ -140,7 +326,7 @@
           <h3>Staff services</h3>
           <p>Experience exceptional service with Adida Events' dedicated staff. Our trained professionals ensure your event runs smoothly, providing attentive and courteous support to meet all your needs.</p>
           <div class="d-flex justify-content-center">
-            <button type="button" class="btn btn-success">Book Now</button>
+            <button type="button" class="btn btn-primary">Book Now</button>
           </div>
         
       </div>
@@ -157,6 +343,9 @@
 
       <div class="container">
         <div class="section-header">
+          <br>
+          <br>
+
           <h2>Gallery</h2>
           <p>Check our gallery from the recent events</p>
         </div>
@@ -179,6 +368,9 @@
     ============================-->
     <section id="testimonials" class="section-with-bg wow fadeInUp">
       <div class="section-header">
+        <br>
+        <br>
+
       <h2>Testimonials</h2>
     </div>
     <div class="parentdiv">
@@ -209,6 +401,9 @@
       <div class="container">
 
         <div class="section-header">
+          <br>
+          <br>
+
           <h2>Contact Us</h2>
           <p>Nihil officia ut sint molestiae tenetur.</p>
         </div>
@@ -274,13 +469,64 @@
   <!--==========================
     Footer
   ============================-->
-
   <!--==========================
     Footer
   ============================-->
-  <div id="footer"></div>
+  <div id="footer">
+    <footer id="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 footer-info">
+                        <h2 style="color: rgb(69, 2, 2);"> <span style="color: red;"> Adida Events</span></h2>
+                        <p>Adida Events is a premier event management company dedicated to creating unforgettable experiences. Specializing in both corporate and personal events, we bring a unique blend of creativity, professionalism, and meticulous attention to detail to every project.</p>
+                    </div>
 
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Useful Links 1</h4>
+                        <ul>
+                            <li><i class="fa fa-angle-right"></i> <a href="#about">About Us</a></li>
+                            <li><i class="fa fa-angle-right"></i> <a href="#services">Services</a></li>
+                            <li><i class="fa fa-angle-right"></i> <a href="#gallery">Gallery</a></li>
+                            <li><i class="fa fa-angle-right"></i> <a href="#">Book event</a></li>
+                           <!-- <li><i class="fa fa-angle-right"></i> <a href="Privacy (3).html">Privacy policy</a></li>--> 
+                        </ul>
+                    </div>
 
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Useful Links 2</h4>
+                        <ul>
+                            <li><i class="fa fa-angle-right"></i> <a href="Tcm.html">Terms of Services</a></li>
+                            <li><i class="fa fa-angle-right"></i> <a href="#contact">Contact Us</a></li>
+                            <li><i class="fa fa-angle-right"></i> <a href="Privacy (3).html">Privacy policy</a></li>
+                            <li><i class="fa fa-angle-right"></i> <a href="#testimonials">Testimonials</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 footer-contact">
+                        <h4>Contact Us</h4>
+                        <p>
+                            1/6979 street no -2 Shivaji Park shahdara Delhi-110032 <br>
+                            <strong>Phone:</strong> 8800123421<br>
+                            <strong>Email:</strong> adidaevents@gmail.com<br>
+                        </p>
+
+                        <div class="social-links">
+                            <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+                            <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="copyright">
+                <strong>Adida Events</strong> Pvt. Ltd. @2024. All rights reserved.
+            </div>
+        </div>
+    </footer><!-- #footer -->
+</div>
 
 
   
@@ -288,23 +534,7 @@
           
   
 
-  <script>
-    // Load header
-    fetch('header.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('header').innerHTML = data;
-      });
-
-    // Load footer
-    fetch('footer.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('footer').innerHTML = data;
-      });
-  </script>
-
-
+ 
   <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
 
   <!-- JavaScript Libraries -->
